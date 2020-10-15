@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <div id="app"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.14.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.14.0/umd/react-dom.development.min.js"></script>
+
+    <script>
+        var h1 = React.createElement('h1', null, 'Hello h1 React')
+        ReactDOM.render(h1, document.getElementById('app'))
+    
+        console.log(h1)
+    </script>
+</body>
+</html>
