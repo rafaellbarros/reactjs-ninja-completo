@@ -12,7 +12,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.14.0/umd/react-dom.development.min.js"></script>
 
     <script>
-        var h1 = React.createElement('h1', null, 'Hello h1 React')
+        var h1 = React.createElement('h1', null, [ 
+            React.createElement('span', null, React.createElement('i', null,'Itálico')),
+            React.createElement('span', null,'Texto do span 2') 
+        ],)
         ReactDOM.render(h1, document.getElementById('app'))
     
         console.log(h1)
