@@ -21,14 +21,21 @@ class App extends Component {
     if (keyCode === ENTER) {
       ajax().get(`https://api.github.com/users/${value}`)
         .then((result) => {
+          const {
+            name,
+            login,
+            followers,
+            following
+          } = result
+
           this.setState({
             userinfo: {
-              username: result.name,
+              username: name,
               photo: result.avatar_url,
-              login: result.login,
+              login,
               repos: result.public_repos,
-              followers: result.followers,
-              following: result.following
+              followers,
+              following
             }
           })
         })
