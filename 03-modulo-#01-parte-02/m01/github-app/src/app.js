@@ -42,6 +42,14 @@ class App extends Component {
     }
   }
 
+  getRepos () {
+    console.log('getRepos')
+  }
+
+  getStarred () {
+    console.log('getStarred')
+  }
+
   render () {
     return (
       <AppContent
@@ -49,6 +57,8 @@ class App extends Component {
         repos={this.state.repos}
         starred={this.state.starred}
         handleSearch={(e) => this.handleSearch(e)}
+        getRepos={this.getRepos}
+        getStarred={this.getStarred}
       />
     )
   }
