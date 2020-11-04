@@ -4,6 +4,18 @@ import ajax from '@fdaciuk/ajax'
 import React, { Component } from 'react'
 import AppContent from './components/app-content'
 
+/*
+const App = React.createClass({
+  handleSearch: function (e) {
+    this.setState({})
+  },
+
+  render () {
+    return <button  onClick={this.handleSearch}>Clique</button>
+  }
+})
+*/
+
 class App extends Component {
   constructor () {
     super()
@@ -13,6 +25,7 @@ class App extends Component {
       starred: [],
       isFetching: false
     }
+    this.onHandleSearch = this.handleSearch.bind(this)
   }
 
   getGitHubApiUrl (username, type) {
@@ -76,7 +89,7 @@ class App extends Component {
         repos={this.state.repos}
         starred={this.state.starred}
         isFetching={this.state.isFetching}
-        handleSearch={(e) => this.handleSearch(e)}
+        handleSearch={this.onHandleSearch}
         getRepos={this.getRepos('repos')}
         getStarred={this.getRepos('starred')}
       />
