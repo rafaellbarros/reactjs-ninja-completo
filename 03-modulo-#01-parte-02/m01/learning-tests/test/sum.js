@@ -1,6 +1,6 @@
 'use strict'
 
-function sum (x, y) {
+function sum(x, y) {
   return x + y
 }
 
